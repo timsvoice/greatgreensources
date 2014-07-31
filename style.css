@@ -5,7 +5,7 @@ Description: Main theme for Great Green Sources
 Author: Timothy Voice
 Author URI: http://www.timothyvoice.com
 Version: 1.0
-Tags: Foundation, Responsive, Horticulture
+Tags: Foundation, Responsive, Horticulture, test
 */
 /* line 316, greatgreensources/bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
@@ -8509,17 +8509,22 @@ th {
 /* ============================ 
 	Backgrounds
 ============================ */
-/* line 4, greatgreensources/scss/partials/_base.scss */
+/* line 1, greatgreensources/scss/partials/_base.scss */
+*, body {
+  background: #333;
+}
+
+/* line 5, greatgreensources/scss/partials/_base.scss */
 hr {
   margin: 0;
 }
 
-/* line 8, greatgreensources/scss/partials/_base.scss */
+/* line 9, greatgreensources/scss/partials/_base.scss */
 :focus {
   background: white;
 }
 
-/* line 12, greatgreensources/scss/partials/_base.scss */
+/* line 13, greatgreensources/scss/partials/_base.scss */
 .vcard {
   border: none;
   padding: 0;
@@ -8527,7 +8532,7 @@ hr {
   display: block;
 }
 
-/* line 19, greatgreensources/scss/partials/_base.scss */
+/* line 20, greatgreensources/scss/partials/_base.scss */
 .hidden {
   display: none !important;
 }
@@ -8545,4 +8550,14 @@ hr {
 /* line 9, greatgreensources/scss/partials/_grid.scss */
 hr.section {
   margin: 2rem 0rem 1rem 0rem;
+}
+
+/* line 1, greatgreensources/scss/partials/_typography.scss */
+li {
+  list-style: none;
+}
+
+/* line 5, greatgreensources/scss/partials/_typography.scss */
+.test {
+  font-size: 1rem;
 }
