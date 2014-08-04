@@ -1,0 +1,28 @@
+<!-- <div class="vendor-filter small-12 columns">
+  <input class="small-12 medium-4 columns" ng-model="searchText" placeholder="Search">
+  <select class="small-12 medium-4 columns" ng-model="catList" ng-options="vendor for vendor in vendorList">
+    <option value="" default selected>Category</option>
+  </select>
+  <select class="small-12 medium-4 columns" ng-model="tagList" ng-options="label for label in tags">
+    <option value="" default selected>Tag</option>
+  </select>
+</div> -->
+
+<% data.vendors.each_with_index do |vendor, index| %>
+  <h1><%= vendor.name %></h1>
+<% end %>
+
+<!-- 
+<ul class="medium-block-grid-3">
+  <li class="vendors" ng-repeat="vendor in vendorList | filter:searchText">
+    <div class="vendor">
+      <h3 class="vendor-title">{{vendor.vendor.title}}</h3>
+      <p class="vendor-description">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis dicta provident ratione, harum quis sit.
+      </p>
+      <p>
+        {{vendor.vendor.category}}
+      </p>
+    </div>
+  </li>
+</ul> -->
