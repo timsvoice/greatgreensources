@@ -1,50 +1,32 @@
 [
-  {
+ {
    "name": "vendor a",
     "categories": [
       "trees",
-      "shrubs"
+      "weeds"
     ],
-    "image": "#"
+    "image": "#",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quam, natus ex, asperiores doloribus illo sed repudiandae unde quae velit earum, saepe deserunt, autem cumque.",
+    "state": "Michigan"
   },
-  {
-    "name": "vendor b",
+   {
+   "name": "vendor b",
     "categories": [
-      "weeds",
+      "shrubs",
       "plants"
     ],
-    "image": "#"
+    "image": "#",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quam, natus ex, asperiores doloribus illo sed repudiandae unde quae velit earum, saepe deserunt, autem cumque.",
+    "state": "Michigan"
   },
-  {
-    "name": "vendor c",
+   {
+   "name": "vendor c",
     "categories": [
-      "weeds",
-      "plants"
+      "flowers",
+      "planters"
     ],
-    "image": "#"
-  },
-  {
-    "name": "vendor d",
-    "categories": [
-      "weeds",
-      "plants"
-    ],
-    "image": "#"
-  },
-  {
-    "name": "vendor e",
-    "categories": [
-      "weeds",
-      "plants"
-    ],
-    "image": "#"
-  },
-  {
-    "name": "vendor f",
-    "categories": [
-      "weeds",
-      "plants"
-    ],
-    "image": "#"
-  }      
+    "image": "#",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quam, natus ex, asperiores doloribus illo sed repudiandae unde quae velit earum, saepe deserunt, autem cumque.",
+    "state": "Michigan"
+  }
 ]

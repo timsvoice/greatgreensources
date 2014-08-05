@@ -1,23 +1,25 @@
-<!-- <div class="vendor-filter small-12 columns">
-  <input class="small-12 medium-4 columns" ng-model="searchText" placeholder="Search">
-  <select class="small-12 medium-4 columns" ng-model="catList" ng-options="vendor for vendor in vendorList">
+<div class="vendor-filter small-12 columns">
+  <input class="small-12 medium-6 columns" ng-model="searchText" placeholder="Search">
+  <select class="small-12 medium-6 columns" ng-model="catList" ng-options="label for label in categories">
     <option value="" default selected>Category</option>
   </select>
-  <select class="small-12 medium-4 columns" ng-model="tagList" ng-options="label for label in tags">
-    <option value="" default selected>Tag</option>
-  </select>
-</div> -->
+</div>
 
 
 <ul class="medium-block-grid-3">
-  <li class="vendors" ng-repeat="vendor in vendors | filter:searchText">
+  <li class="vendors" ng-repeat="vendors in vendorList | filter:searchText | filter:catList | filter:stateList">
     <div class="vendor">
-      <h3 class="vendor-title">{{vendors[0]}}</h3>
+      <h3 class="vendor-title">{{vendors.name}}</h3>
       <p class="vendor-description">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis dicta provident ratione, harum quis sit.
+        {{vendors.description}}
       </p>
+      <ul class="vendor-categories">
+        <li class="vendor-category" ng-repeat="categories in vendors.categories">
+          {{categories}}
+        </li>
+      </ul>
       <p>
-        {{vendors.category}}
+        {{vendors.state}}
       </p>
     </div>
   </li>
