@@ -19,3 +19,23 @@ hr {
 .hidden {
 	display: none !important;
 }
+
+.sidebar {
+  background-color: $brand-color;
+  height: 100vh;
+  position: fixed;
+}
+
+.branding {
+  background-color: $dark-brand;
+  margin-bottom: 2rem;
+}
+
+.vendors {
+  background-color: $white;
+}
+
+.vendor-header {
+  border-bottom: 1px $dark-brand solid;
+  margin-bottom: 1.5rem;
+}

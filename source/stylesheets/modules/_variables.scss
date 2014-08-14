@@ -2,9 +2,12 @@
 	Colors
 ============================ */
 
-$gray: hsla(0,0,91%,1);
+$gray: hsla(0,0,93%,1);
 $white: hsla(0,0,100%,1);
 $black: hsla(0,0,0%,1);
+$brand-color: hsla(124,30%,40%,1);
+$dark-brand: darken($brand-color, 10%);
+$accent-color: hsla(0,0%,77%,1);
 
 /* ============================ 
 	Typography

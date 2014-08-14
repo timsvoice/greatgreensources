@@ -1,0 +1,13 @@
+input[type=text],select , textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  border: 1px solid $brand-color;
+}
+ 
+input[type=text]:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 5px $brand-color;
+  border: 1px solid $brand-color;
+}

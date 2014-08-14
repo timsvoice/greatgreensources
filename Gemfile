@@ -3,6 +3,7 @@
 source 'http://rubygems.org'
 
 gem "middleman"
+gem "google-api-client"
 
 # Live-reloading plugin
 gem "middleman-livereload"

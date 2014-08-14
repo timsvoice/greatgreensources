@@ -1,26 +1,44 @@
-<div class="vendor-filter small-12 columns">
-  <input class="small-12 medium-6 columns" ng-model="searchText" placeholder="Search">
-  <select class="small-12 medium-6 columns" ng-model="catList" ng-options="label for label in categories">
-    <option value="" default selected>Category</option>
-  </select>
+<div class="vendor-header">
+  <h2>
+    Vendors
+  </h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, eos.
+  </p>
 </div>
 
+  <div class="vendor-filter small-6 columns alpha beta">
+    <input type="text" class="search-text" ng-model="searchText" placeholder="Search">
+  </div>
+  <div class="vendor-filter small-5 columns alpha beta right">
+      <select class="cat-list small-10 columns" ng-model="catList" ng-options="label for label in categories">
+        <option value="" default selected>Category</option>
+      </select>
+      <div class="small-2 columns alpha beta">
+        <button class="clear" ng-click="catList = null">X</button>
+      </div>
+  </div>  
 
-<ul class="medium-block-grid-3">
-  <li class="vendors" ng-repeat="vendors in vendorList | filter:searchText | filter:catList | filter:stateList">
-    <div class="vendor">
-      <h3 class="vendor-title">{{vendors.name}}</h3>
-      <p class="vendor-description">
-        {{vendors.description}}
-      </p>
-      <ul class="vendor-categories">
-        <li class="vendor-category" ng-repeat="categories in vendors.categories">
-          {{categories}}
-        </li>
-      </ul>
-      <p>
-        {{vendors.state}}
-      </p>
-    </div>
-  </li>
-</ul>
+  <div>
+    <ul class="medium-block-grid-3">
+    <li class="vendors" ng-controller="mainController" ng-repeat="vendors in vendorList | filter:searchText | filter:catList | filter:stateList">
+      <div class="vendor">
+        <div class="vendor-title">
+          <h3>{{vendors.name}}</h3>
+        </div>
+        <img src="<%= lorem.image('350x250') %>" alt="">
+        <p class="vendor-description">
+          {{vendors.description}}
+        </p>
+        <ul class="vendor-categories">
+          <li class="vendor-category" ng-repeat="categories in vendors.categories">
+            {{categories}}
+          </li>
+        </ul>
+        <div class="vendor-availability">
+          <a href="{{driveList.items[0].alternateLink}}">availability</a> 
+        </div>           
+      </div>
+    </li>
+  </ul>
+  </div>

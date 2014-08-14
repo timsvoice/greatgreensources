@@ -4,26 +4,33 @@ title: Great Green Sources
 
 <div class="container">
   <!-- sidebar menu -->
-  <div class="small-12 medium-4 left">
-    <img src="http://www.placehold.it/500x500" alt="" class="branding-sidebar">
-    <ul class="menu">
-      <li class="menu-item">
+  <div class="small-12 medium-3 left sidebar show-for-medium-up">
+    <div class="small-12 columns branding">
+      <h1 class="branding-header">Great Green Sources</h1>
+    </div>
+<!--     <div class="small-12 columns">
+      <p class="branding-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sed officia beatae velit autem voluptas harum ad aliquam facere pariatur.</p>
+    </div> -->
+    <div ng-controller="menu" class="menu small-12 columns end alpha beta">
+      <ul class="menu">
+      <li class="menu-item" ng-class="{active: location.path() != '/about'}">
         <a href="vendors">Vendors</a>
       </li>
-      <li class="menu-item">
+      <li class="menu-item" ng-class="{active: location.path() == '/about'}">
         <a href="about">About</a>
       </li>
-      <li class="menu-item">
-        <a href="mailto:kris@greatgreensources.com">
-          Email Kris
-        </a>
-      </li>
     </ul>
+    </div>
+    <div class="about-details">
+      <a href="mailto:kris@greatgreensources.com">
+        Email Kris
+      </a>
+    </div>
   </div>
   <!-- view container -->
-  <div class="small-12 medium-8 columns right">
+  <div class="small-12 medium-9 columns right vendors">
     
-    <div ng-view></div>
+    <div ng-view  ng-controller="mainController"></div>
 
   </div>
 </div>
