@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 
 ruby "2.0.0"
 
-gem "middleman", "~>3.3.5"
+gem "middleman", "~>3.1.6"
 gem "google-api-client"
 gem "rack-contrib"
 gem "puma"

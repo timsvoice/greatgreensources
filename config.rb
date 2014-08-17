@@ -80,6 +80,9 @@ after_configuration do
   sprockets.append_path File.join "#{root}", @bower_config["directory"]
 end
 
+
+set :build_dir, "tmp"
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'

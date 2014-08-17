@@ -30,8 +30,7 @@
         "/images/a_brown_and_sons/a_brown_and_sons_017.JPG",
         "/images/a_brown_and_sons/a_brown_and_sons_018.JPG",
         "/images/a_brown_and_sons/a_brown_and_sons_019.JPG",
-        "/images/a_brown_and_sons/a_brown_and_sons_020.JPG",
-        "/images/a_brown_and_sons/a_brown_and_sons_021.JPG"
+        "/images/a_brown_and_sons/a_brown_and_sons_020.JPG"
       ]
     },
    {
@@ -356,21 +355,21 @@
     "state": "Michigan",
     "availability": "#",
     "images": [
-      "/images/black_lake_nursery/black_lake_nursery_000.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_001.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_002.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_003.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_004.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_005.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_006.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_007.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_008.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_009.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_010.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_012.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_013.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_014.jpg",
-      "/images/black_lake_nursery/black_lake_nursery_015.jpg"
+      "/images/black_lake_nursery/black_lake_nursery_000.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_001.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_002.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_003.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_004.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_005.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_006.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_007.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_008.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_009.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_010.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_012.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_013.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_014.JPG",
+      "/images/black_lake_nursery/black_lake_nursery_015.JPG"
     ]
   },
    {
@@ -718,7 +717,7 @@
     "state": "Michigan",
     "availability": "#",
     "images": [
-      "/images/woodburn/woodburn_001.jpg",
+      "/images/woodburn/woodburn_001.JPG",
       "/images/woodburn/woodburn_002.JPG",
       "/images/woodburn/woodburn_003.JPG",
       "/images/woodburn/woodburn_004.JPG",

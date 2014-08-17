@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="greatgreen" ng-init="init()">
+  <head>
+    <!-- Angular -->
+    <base href="/">
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Great Green Sources</title>
+    
+    <link href="/stylesheets/app.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/modernizr.js" type="text/javascript"></script>
+  </head>
+  
+  <body class="index">
+    
+    <div class="container">
+  <!-- sidebar menu -->
+  <div class="small-12 medium-3 left sidebar show-for-medium-up">
+    <div class="small-12 columns branding">
+      <h1 class="branding-header">
+        <a href="/">
+          Great Green Sources
+        </a>
+      </h1>
+    </div>
+<!--     <div class="small-12 columns">
+      <p class="branding-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sed officia beatae velit autem voluptas harum ad aliquam facere pariatur.</p>
+    </div> -->
+    <div ng-controller="menu" class="menu small-12 columns end alpha beta">
+      <ul class="menu">
+      <li class="menu-item" ng-class="{active: location.path() != '/services'}">
+        <a href="vendors">Vendors</a>
+      </li>
+      <li class="menu-item" ng-class="{active: location.path() == '/services'}">
+        <a href="services">Services</a>
+      </li>
+    </ul>
+    </div>
+    <div class="about-details">
+      <a href="mailto:kris@greatgreensources.com">
+        Email Kris
+      </a>
+    </div>
+  </div>
+  <!-- view container -->
+  <div class="small-12 medium-9 columns right vendors">
+    
+    <div ng-view  ng-controller="mainController" ng-init="init()"></div>
+
+  </div>
+</div>
+
+    <script src="/javascripts/all.js" type="text/javascript"></script><script src="/javascripts/mainController.js" type="text/javascript"></script><script src="/javascripts/services.js" type="text/javascript"></script>
+  </body>
+</html>

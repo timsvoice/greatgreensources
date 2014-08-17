@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="greatgreen" ng-init="init()">
+  <head>
+    <!-- Angular -->
+    <base href="/">
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Great Green Sources</title>
+    
+    <link href="/stylesheets/app.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/modernizr.js" type="text/javascript"></script>
+  </head>
+  
+  <body class="vendors vendors_vendor-20tim vendors_vendor-20tim_index">
+    
+    <div class="row">
+  <div class="vendor-header">
+    <h3>
+      <a href="vendors/{{vendors.name}}">{{vendor.name}}</a>
+    </h3>
+  </div>
+
+  <div class="small-12 medium-5 columns alpha">
+    <img src="http://placehold.it/350x250" alt="">  
+  </div>
+
+  <div class="small-12 medium-7 columns alpha">
+    <p class="vendor-description">
+      {{vendor.description}}
+    </p>
+    <ul class="vendor-categories">
+      <li class="vendor-category" ng-repeat="categories in vendor.categories">
+        {{categories}}
+      </li>
+    </ul>
+  </div>        
+
+  <div class="vendor-availability small-12 medium-3 columns end">
+    <a href="{{driveList.items[0].alternateLink}}">availability</a> 
+  </div>
+</div>      
+           
+<div class="row">
+  <div class="image-gallery">
+    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 vendor-image-list">
+      <li class="vendor-image" ng-repeat="image in vendor.images">
+        <img src="{{image}}" alt="vendor image">        
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <script src="/javascripts/all.js" type="text/javascript"></script><script src="/javascripts/mainController.js" type="text/javascript"></script><script src="/javascripts/services.js" type="text/javascript"></script>
+  </body>
+</html>
