@@ -20,11 +20,13 @@
   </div>  
 
   <div>
-    <ul class="medium-block-grid-3">
+    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
     <li class="vendors" ng-controller="mainController" ng-repeat="vendors in vendorList | filter:searchText | filter:catList | filter:stateList">
       <div class="vendor">
         <div class="vendor-title">
-          <h3>{{vendors.name}}</h3>
+          <h3>
+            <a href="vendors/{{vendors.name}}">{{vendors.name}}</a>
+          </h3>
         </div>
         <img src="<%= lorem.image('350x250') %>" alt="">
         <p class="vendor-description">

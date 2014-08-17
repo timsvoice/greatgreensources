@@ -2,8 +2,12 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem "middleman"
+ruby "2.0.0"
+
+gem "middleman", "~>3.3.5"
 gem "google-api-client"
+gem "rack-contrib"
+gem "puma"
 
 # Live-reloading plugin
 gem "middleman-livereload"

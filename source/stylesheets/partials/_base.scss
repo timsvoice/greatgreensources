@@ -1,6 +1,13 @@
 *, body {
 }
 
+a {
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+}
+
 hr {
 	margin: 0;
 }

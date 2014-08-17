@@ -1,0 +1,53 @@
+[
+ {
+   "name": "vendor a",
+    "categories": [
+      "trees",
+      "weeds"
+    ],
+    "image": "#",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quam, natus ex, asperiores deserunt.",
+    "state": "Michigan",
+    "availability": "https://docs.google.com/spreadsheets/d/1aqrUNmkGYom8os2aUMUJoRja7jEc5UIi9lWu0NuTQvg/pubhtml"
+  },
+   {
+   "name": "vendor b",
+    "categories": [
+      "shrubs",
+      "plants"
+    ],
+    "image": "#",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quam, natus ex, asperiores deserunt.",
+    "state": "Michigan"
+  },
+   {
+   "name": "vendor c",
+    "categories": [
+      "flowers",
+      "planters"
+    ],
+    "image": "#",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quam, natus ex, asperiores deserunt.",
+    "state": "Michigan"
+  },
+   {
+   "name": "vendor b",
+    "categories": [
+      "shrubs",
+      "plants"
+    ],
+    "image": "#",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quam, natus ex, asperiores deserunt.",
+    "state": "Michigan"
+  },
+   {
+   "name": "vendor c",
+    "categories": [
+      "flowers",
+      "planters"
+    ],
+    "image": "#",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quam, natus ex, asperiores deserunt.",
+    "state": "Michigan"
+  }
+]

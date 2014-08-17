@@ -18,8 +18,12 @@ app.config(['$routeProvider','$locationProvider',
       when('/vendors', {
         templateUrl: 'vendors.html',
       }).
-      when('/about', {
-        templateUrl: 'about.html',
+      when('/services', {
+        templateUrl: 'services.html',
+      }).
+      when('/vendors/:name', {
+        templateUrl: 'vendors/template.html',
+        controller: 'mainController'
       }).
       otherwise({
         redirectTo: '/'

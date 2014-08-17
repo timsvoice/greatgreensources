@@ -3458,7 +3458,7 @@ label.error {
 
 /* Typography */
 /* line 2296, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-.joyride-tip-guide h1, .joyride-tip-guide h2, .joyride-tip-guide h3, .joyride-tip-guide h4, .joyride-tip-guide h5, .joyride-tip-guide h6 {
+.joyride-tip-guide h1, .joyride-tip-guide .vendor-header h2, .vendor-header .joyride-tip-guide h2, .joyride-tip-guide h2, .joyride-tip-guide h3, .joyride-tip-guide h4, .joyride-tip-guide h5, .joyride-tip-guide h6 {
   line-height: 1.25;
   margin: 0;
   font-weight: bold;
@@ -4107,16 +4107,16 @@ ul.pagination li {
   margin-bottom: 0; }
 
 /* line 2781, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-.panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p {
+.panel h1, .panel .vendor-header h2, .vendor-header .panel h2, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p {
   color: #333; }
 
 /* line 2783, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-.panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
+.panel h1, .panel .vendor-header h2, .vendor-header .panel h2, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
   line-height: 1;
   margin-bottom: 0.625rem; }
 
 /* line 2786, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-.panel h1.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel h5.subheader, .panel h6.subheader {
+.panel h1.subheader, .panel .vendor-header h2.subheader, .vendor-header .panel h2.subheader, .panel h2.subheader, .panel h3.subheader, .panel h4.subheader, .panel h5.subheader, .panel h6.subheader {
   line-height: 1.4; }
 
 /* line 2788, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
@@ -4137,16 +4137,16 @@ ul.pagination li {
   margin-bottom: 0; }
 
 /* line 2799, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6, .panel.callout p {
+.panel.callout h1, .panel.callout .vendor-header h2, .vendor-header .panel.callout h2, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6, .panel.callout p {
   color: #333; }
 
 /* line 2801, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-.panel.callout h1, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6 {
+.panel.callout h1, .panel.callout .vendor-header h2, .vendor-header .panel.callout h2, .panel.callout h2, .panel.callout h3, .panel.callout h4, .panel.callout h5, .panel.callout h6 {
   line-height: 1;
   margin-bottom: 0.625rem; }
 
 /* line 2804, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-.panel.callout h1.subheader, .panel.callout h2.subheader, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout h5.subheader, .panel.callout h6.subheader {
+.panel.callout h1.subheader, .panel.callout .vendor-header h2.subheader, .vendor-header .panel.callout h2.subheader, .panel.callout h2.subheader, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout h5.subheader, .panel.callout h6.subheader {
   line-height: 1.4; }
 
 /* line 2806, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
@@ -5254,13 +5254,13 @@ meta.foundation-mq-topbar {
   font-size: 16px; }
 
 /* line 3572, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-.top-bar .name h1 {
+.top-bar .name h1, .top-bar .name .vendor-header h2, .vendor-header .top-bar .name h2 {
   line-height: 45px;
   font-size: 1.0625rem;
   margin: 0; }
 
 /* line 3576, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-.top-bar .name h1 a {
+.top-bar .name h1 a, .top-bar .name .vendor-header h2 a, .vendor-header .top-bar .name h2 a {
   font-weight: normal;
   color: #fff;
   width: 75%;
@@ -5623,7 +5623,7 @@ meta.foundation-mq-topbar {
     float: left; }
 
   /* line 3818, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-  .top-bar .name h1 a {
+  .top-bar .name h1 a, .top-bar .name .vendor-header h2 a, .vendor-header .top-bar .name h2 a {
     width: auto; }
 
   /* line 3820, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
@@ -6000,7 +6000,7 @@ meta.foundation-mq-topbar {
     text-align: justify !important; } }
 /* Typography resets */
 /* line 4065, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+div, dl, dt, dd, ul, ol, li, h1, .vendor-header h2, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
   margin: 0;
   padding: 0; }
 
@@ -6042,7 +6042,7 @@ p aside {
 
 /* Default header styles */
 /* line 4096, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-h1, h2, h3, h4, h5, h6 {
+h1, .vendor-header h2, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -6053,13 +6053,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.4; }
 
 /* line 4105, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+h1 small, .vendor-header h2 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: 60%;
   color: #6f6f6f;
   line-height: 0; }
 
 /* line 4110, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-h1 {
+h1, .vendor-header h2 {
   font-size: 2.125rem; }
 
 /* line 4113, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
@@ -6263,11 +6263,11 @@ blockquote, blockquote p {
 
 @media only screen and (min-width: 40.063em) {
   /* line 4261, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-  h1, h2, h3, h4, h5, h6 {
+  h1, .vendor-header h2, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
 
   /* line 4263, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-  h1 {
+  h1, .vendor-header h2 {
     font-size: 2.75rem; }
 
   /* line 4265, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
@@ -6404,14 +6404,14 @@ blockquote, blockquote p {
   position: relative; }
 
 /* line 4355, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-.tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4, .tab-bar h5, .tab-bar h6 {
+.tab-bar h1, .tab-bar .vendor-header h2, .vendor-header .tab-bar h2, .tab-bar h2, .tab-bar h3, .tab-bar h4, .tab-bar h5, .tab-bar h6 {
   color: #fff;
   font-weight: bold;
   line-height: 2.8125rem;
   margin: 0; }
 
 /* line 4360, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
-.tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4 {
+.tab-bar h1, .tab-bar .vendor-header h2, .vendor-header .tab-bar h2, .tab-bar h2, .tab-bar h3, .tab-bar h4 {
   font-size: 1.125rem; }
 
 /* line 4363, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/css/foundation.css */
@@ -7061,7 +7061,7 @@ dfn {
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
 /* line 131, /Users/timsvoice/code/greatgreensources/source/bower_components/foundation/scss/normalize.scss */
-h1 {
+h1, .vendor-header h2 {
   font-size: 2em;
   margin: 0.67em 0; }
 
@@ -7366,6 +7366,26 @@ hr {
 .hidden {
   display: none !important; }
 
+/* line 23, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_base.scss */
+.sidebar {
+  background-color: #47854b;
+  height: 100vh;
+  position: fixed; }
+
+/* line 29, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_base.scss */
+.branding {
+  background-color: #366339;
+  margin-bottom: 2rem; }
+
+/* line 34, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_base.scss */
+.vendors {
+  background-color: white; }
+
+/* line 38, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_base.scss */
+.vendor-header {
+  border-bottom: 1px #366339 solid;
+  margin-bottom: 1.5rem; }
+
 /* line 1, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_grid.scss */
 .alpha {
   padding-left: 0px !important; }
@@ -7373,3 +7393,169 @@ hr {
 /* line 5, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_grid.scss */
 .beta {
   padding-right: 0px !important; }
+
+/* line 3, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+.branding-header, .vendor-header h2 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 900;
+  color: white;
+  margin-top: 0.85rem; }
+
+/* line 12, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+.vendor-header h2 {
+  color: black;
+  display: inline-block;
+  margin-right: 1rem; }
+/* line 19, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+.vendor-header p {
+  font-style: italic;
+  display: inline-block;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  font-weight: 200;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem; }
+
+/* line 30, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+.branding-description {
+  margin-top: 2rem;
+  color: white;
+  font-weight: 900; }
+
+/* line 37, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+.menu ul {
+  margin-left: 0; }
+/* line 40, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+.menu li {
+  list-style: none;
+  color: #47854b;
+  font-size: 1.5rem;
+  line-height: 2.5rem; }
+
+/* line 48, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+.menu-item, .menu-item.active, .menu-item.active-home {
+  background-color: #47854b;
+  margin-left: 0rem; }
+  /* line 51, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+  .menu-item a, .menu-item.active a, .menu-item.active-home a {
+    margin-left: 0rem;
+    color: #244226;
+    font-weight: 900;
+    padding-left: 1rem; }
+  /* line 57, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+  .menu-item:hover {
+    background-color: #59a65e; }
+
+/* line 64, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+.active.menu-item a, .active-home.menu-item a {
+  background-color: white;
+  color: #366339;
+  font-weight: 900;
+  width: 100%;
+  display: block; }
+
+/* line 73, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+.about-details {
+  position: absolute;
+  bottom: 0;
+  margin: 1rem; }
+  /* line 77, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+  .about-details a {
+    color: white;
+    font-size: 1.25rem;
+    text-decoration: underline; }
+
+/* line 86, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+.vendor-title {
+  background-color: #47854b; }
+  /* line 88, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+  .vendor-title h3 {
+    color: white;
+    margin-left: 1rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 1.5rem;
+    line-height: 3rem; }
+
+/* line 99, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+.vendor-description {
+  margin-top: 0.5rem;
+  font-weight: 200;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.25rem; }
+
+/* line 107, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_typography.scss */
+.vendor-category {
+  color: #366339;
+  font-weight: 900;
+  margin-left: 0.25rem; }
+
+/* line 1, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_forms.scss */
+input[type=text], select, textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  border: 1px solid #47854b; }
+
+/* line 10, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_forms.scss */
+input[type=text]:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 5px #47854b;
+  border: 1px solid #47854b; }
+
+/* line 1, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_buttons.scss */
+button.clear {
+  padding: 0.25rem;
+  background: #366339;
+  width: 100%;
+  height: 3rem;
+  color: white; }
+
+/* line 3, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_vendors.scss */
+.vendor-filter input[type=text] {
+  color: #366339;
+  font-size: 1rem;
+  height: 3rem; }
+  /* line 7, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_vendors.scss */
+  .vendor-filter input[type=text]:focus {
+    border-color: #47854b; }
+/* line 11, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_vendors.scss */
+.vendor-filter select {
+  height: 3rem;
+  color: #366339; }
+  /* line 14, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_vendors.scss */
+  .vendor-filter select:focus {
+    border-color: #47854b; }
+
+/* line 22, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_vendors.scss */
+.vendor {
+  background-color: #ededed; }
+
+/* line 26, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_vendors.scss */
+.vendor-categories {
+  margin-left: 0;
+  margin-top: 0rem; }
+  /* line 29, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_vendors.scss */
+  .vendor-categories li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 0.5rem; }
+
+/* line 36, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_vendors.scss */
+.vendor-availability {
+  background-color: #366339;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center; }
+  /* line 42, /Users/timsvoice/code/greatgreensources/source/stylesheets/partials/_vendors.scss */
+  .vendor-availability a {
+    color: white;
+    margin-left: 0.25rem;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.25rem; }

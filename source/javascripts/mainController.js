@@ -1,19 +1,24 @@
-app.controller('mainController', ['$scope', '$location', 'vendorsAPI', '$http',
-  function($scope, $location, vendorsAPI, $http) {
+app.controller('mainController', ['$scope', '$routeParams', '$location', 'vendorsAPI', '$http',
+  function($scope, $routeParams, $location, vendorsAPI, $http) {
+    
     var vendorsUrl = "data/vendors.json";
-    var url = 'https://www.googleapis.com/drive/v2/files/';
 
-    $scope.driveList = [];
     $scope.vendorList = [];
     $scope.categories = [];
     $scope.states = [];
+    $scope.vendor = [];
 
     $http.get(vendorsUrl, {
       cache: true
     }).
     success(function(data){
       $scope.vendorList = data;
-      console.log($scope.vendorList);
+
+      angular.forEach($scope.vendorList, function(vendor){
+        if (vendor.name == $routeParams.name)
+          $scope.vendor = vendor;
+      });
+
       angular.forEach($scope.vendorList, function(value, index){
         
         // create categories for catList model
@@ -29,27 +34,29 @@ app.controller('mainController', ['$scope', '$location', 'vendorsAPI', '$http',
           // if category is unique, add to categories
           if (exists === false) {
             $scope.categories.push(categoryList);
-            console.log($scope.categories);
           }
         });
       });
     });
 
-    var authCode = "ya29.WQArNsXoaGFl-iEAAAArXJyD7BV_HT0i8v9Ls_DXYMuGtaWgd1HbLEm59S44_fFQs-F-hbTMmnZaJTHJQiI";
-
-    $http.get(url,{
-      headers: {
-        "Authorization": "Bearer " + authCode,
-      }
-    }).
-    success(function(data){
-      $scope.driveList = data;
-      console.log($scope.driveList);
-    }).error(function(){
-      console.log("google error");
-    });
 }]);
-
 app.controller('menu', ['$scope', '$location', function ($scope, $location) {
   $scope.location = $location;
+}]);
+
+app.controller('vendorCtrl', ['$scope','$routeParams', function($scope, $routeParams){
+  $scope.vendor = {
+    name: $routeParams.name
+  };
+}]);
+
+app.controller('imagesCtrl', ['$scope', function ($scope) {
+    var folderContents = require('folder-contents');
+    var options = {
+      "path" : "/data",
+      "recursively": "true"
+    };
+
+    var imagesResult = folderContents(options);
+    console.log(imagesResult);
 }]);
