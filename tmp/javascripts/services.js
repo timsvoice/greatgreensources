@@ -1,13 +1,1 @@
-app.factory('vendorsAPI', function ($http) {
-  var vendorsUrl = "data/vendors.json";
-  var vendors = [];
-  return function(vendors) {
-  $http.get(vendorsUrl, {
-      cache: true
-    }).
-    success(function(data){
-      vendors.push(data);
-      console.log(data);
-    });
-  };
-});
+app.factory("vendorsAPI",function(n){var o="data/vendors.json";return function(c){n.get(o,{cache:!0}).success(function(n){c.push(n),console.log(n)})}});
