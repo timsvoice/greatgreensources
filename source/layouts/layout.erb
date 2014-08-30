@@ -4,6 +4,9 @@
     <!-- Angular -->
     <base href="/">
     
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+    
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Use title if it's in the page YAML frontmatter -->
@@ -17,6 +20,6 @@
     
     <%= yield %>
 
-    <%= javascript_include_tag  "all", "mainController", "services" %>
+    <%= javascript_include_tag  "all", "mainController", "services", "owlCarousel" %>
   </body>
 </html>

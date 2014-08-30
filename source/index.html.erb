@@ -8,7 +8,7 @@ title: Great Green Sources
     <div class="small-12 columns branding">
       <h1 class="branding-header">
         <a href="/">
-          Great Green Sources
+          <%= image_tag("branding-white.png") %>
         </a>
       </h1>
     </div>
@@ -17,13 +17,16 @@ title: Great Green Sources
     </div> -->
     <div ng-controller="menu" class="menu small-12 columns end alpha beta">
       <ul class="menu">
-      <li class="menu-item" ng-class="{active: location.path() != '/services'}">
+      <li class="menu-item" ng-class="{active: location.path() != '/images'}">
         <a href="vendors">Vendors</a>
       </li>
-      <li class="menu-item" ng-class="{active: location.path() == '/services'}">
-        <a href="services">Services</a>
+      <li class="menu-item" ng-class="{active: location.path() == '/images'}">
+        <a href="images">Images</a>
       </li>
     </ul>
+    </div>
+    <div class="about-description">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint sequi dolores, corrupti nobis eaque eius molestiae necessitatibus odit enim qui.</p>
     </div>
     <div class="about-details">
       <a href="mailto:kris@greatgreensources.com">

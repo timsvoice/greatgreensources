@@ -1,9 +1,10 @@
-app.controller('mainController', ['$scope', '$routeParams', '$location', 'vendorsAPI', '$http',
-  function($scope, $routeParams, $location, vendorsAPI, $http) {
+app.controller('mainController', ['$scope', '$routeParams', '$location', '$anchorScroll', 'vendorsAPI', '$http',
+  function($scope, $routeParams, $location, $anchorScroll, vendorsAPI, $http) {
     
     var vendorsUrl = "data/vendors.json";
 
     $scope.vendorList = [];
+    $scope.names = [];
     $scope.categories = [];
     $scope.states = [];
     $scope.vendor = [];
@@ -20,7 +21,10 @@ app.controller('mainController', ['$scope', '$routeParams', '$location', 'vendor
       });
 
       angular.forEach($scope.vendorList, function(value, index){
-        
+        // create list of vendor names
+        angular.forEach(value.name, function(name, index){
+          $scope.names.push(name);
+        });
         // create categories for catList model
         angular.forEach(value.categories, function(categoryList, index){
           // only add categories if they don't already exist

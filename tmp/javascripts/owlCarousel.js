@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".owl-demo").owlCarousel({items:2,itemsDesktop:[1e3,2],itemsDesktopSmall:[900,2],itemsTablet:[600,2],lazyLoad:!0,navigation:!0,autoPlay:!1,navigationText:["<i class='ion-ios7-arrow-back'></i>","<i class='ion-ios7-arrow-forward'></i>"]})});

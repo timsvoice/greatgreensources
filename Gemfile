@@ -8,6 +8,7 @@ gem "middleman", "~>3.1.6"
 gem "google-api-client"
 gem "rack-contrib"
 gem "puma"
+gem "middleman-deploy"
 
 # Live-reloading plugin
 gem "middleman-livereload"

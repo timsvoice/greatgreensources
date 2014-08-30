@@ -35,10 +35,16 @@
 
 .vendor-availability {
   background-color: $dark-brand;
-  margin-top: 1rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   text-align: center;
+  border-right: 1px solid $brand-color;
+    &:hover {
+      background-color: lighten($brand-color, 10%);
+      a {
+        color: $dark-brand;
+      }
+    }
   a {
     color: $white;
     margin-left: 0.25rem;
@@ -46,4 +52,65 @@
     font-weight: $medium-text;
     font-size: 1rem;
   }
+}
+
+.vendor-images {
+  @extend .vendor-availability;
+}
+
+// Vendor Image Gallery
+
+.vendor-gallery {
+  background-color: $gray;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-top: 5px solid $brand-color;
+  .vendor-title {
+    background-color: inherit;
+    padding-top: 1rem;
+    color: $dark-brand;
+    font-weight: $heavy-text;
+    padding-left: 0.5rem;
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .vendor-availability {
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+  }
+  .item {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    text-align: center;
+  }
+}
+
+.owl-buttons {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.owl-prev {
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  background-color: darken($gray, 10%);
+  width: 2rem;
+  text-align: center;
+  i {
+    top: 50%;
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    color: $brand-color;
+  }
+}
+
+.owl-next {
+  @extend .owl-prev;
+  float: right;
 }

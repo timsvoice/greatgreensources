@@ -3,22 +3,23 @@
 ============================ */
 
 $gray: hsla(0,0,93%,1);
+$dark-gray : darken($gray, 10%);
 $white: hsla(0,0,100%,1);
 $black: hsla(0,0,0%,1);
 $brand-color: hsla(124,30%,40%,1);
 $dark-brand: darken($brand-color, 10%);
-$accent-color: hsla(0,0%,77%,1);
+$accent-color: hsla(51,98%,50%,0.83);
 
 /* ============================ 
 	Typography
 ============================ */
 
-$body-font: "pragmatica-web", Helvetica, Arial, sans-serif;
+$body-font: "Source Sans Pro", Helvetica, Arial, sans-serif;
 $text-font: "minion-pro", Times, serif;
 
 $heavy-text:900;
 $medium-text:400;
-$light-text:200;
+$light-text:300;
 
 $underline: 0.0625rem dotted;
 

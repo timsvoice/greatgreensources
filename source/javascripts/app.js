@@ -18,8 +18,8 @@ app.config(['$routeProvider','$locationProvider',
       when('/vendors', {
         templateUrl: 'vendors.html',
       }).
-      when('/services', {
-        templateUrl: 'services.html',
+      when('/images', {
+        templateUrl: 'images.html',
       }).
       when('/vendors/:name', {
         templateUrl: 'vendors/template.html',

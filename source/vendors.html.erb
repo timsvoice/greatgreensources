@@ -22,24 +22,24 @@
   <div>
     <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
     <li class="vendors" ng-controller="mainController" ng-repeat="vendors in vendorList | filter:searchText | filter:catList | filter:stateList">
-      <div class="vendor">
+      <div class="vendor" id="{{vendors.id}}">
         <div class="vendor-title">
           <h3>
             <a href="vendors/{{vendors.name}}">{{vendors.name}}</a>
           </h3>
         </div>
         <img src="<%= lorem.image('350x250') %>" alt="">
-        <p class="vendor-description">
-          {{vendors.description}}
-        </p>
         <ul class="vendor-categories">
-          <li class="vendor-category" ng-repeat="categories in vendors.categories">
+          <li class="vendor-category" ng-repeat="categories in vendors.categories" ng-click="catList = trees">
             {{categories}}
           </li>
         </ul>
-        <div class="vendor-availability">
-          <a href="{{driveList.items[0].alternateLink}}">availability</a> 
-        </div>           
+        <p class="vendor-description">
+          {{vendors.description}}
+        </p> 
+        <div class="small-12 columns alpha beta vendor-availability">
+          <a href="#">availability</a> 
+        </div>          
       </div>
     </li>
   </ul>

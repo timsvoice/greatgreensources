@@ -35,7 +35,8 @@ hr {
 
 .branding {
   background-color: $dark-brand;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 3rem;
 }
 
 .vendors {
@@ -45,4 +46,10 @@ hr {
 .vendor-header {
   border-bottom: 1px $dark-brand solid;
   margin-bottom: 1.5rem;
+}
+
+.about-description {
+  margin-top: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }

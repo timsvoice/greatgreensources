@@ -99,6 +99,9 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 
+  # Activate gzip for compressed files
+  activate :gzip
+
   # Enable cache buster
   # activate :asset_hash
 
@@ -111,4 +114,15 @@ end
 
 data.vendors.each do |vendor|
   proxy "/vendors/#{vendor[:name]}.html", "/vendors/template.html"
+end
+
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.host   = '104.131.35.207'
+  deploy.path   = '/var/www/104.131.35.207/public_html'
+  # Optional Settings
+  deploy.user  = 'root' # no default
+  # deploy.port  = 5309 # ssh port, default: 22
+  # deploy.clean = true # remove orphaned files on remote host, default: false
+  # deploy.flags = '-rltgoDvzO --no-p --del' # add custom flags, default: -avz
 end
