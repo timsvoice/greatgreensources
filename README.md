@@ -1,56 +1,73 @@
+# A Lineman JS Template using Angular
 
-middleman-sass-foundation
-=========================
+[![Build Status](https://travis-ci.org/linemanjs/lineman-angular-template.png?branch=master)](https://travis-ci.org/linemanjs/lineman-angular-template)
 
-A [Middleman](http://middlemanapp.com/) template built with [ZURB Foundation](http://foundation.zurb.com/) and [Sass Way](http://thesassway.com/beginner/how-to-structure-a-sass-project) folder structure
+This is a project template for Angular JS applications using [Lineman](http://www.linemanjs.com).
 
-Thanks to [axyz](https://github/axyz) who's [Middleman ZURB Foundation template](https://github.com/axyz/middleman-zurb-foundation) provided the main structure and [ZURB Foundation](http://foundation.zurb.com/) integration method detailed below.
+It includes the following features:
 
-## Installation ##
+1. Template Precompilation into Angulars $templateCache using `grunt-angular-templates`
+2. A basic login, logout service bound to sample routes inside `config/server.js`
+3. A router, and 2 views `home` and `login`
+4. A directive that shows a message on mouseover
+5. 2 Controllers, for `home` and `login`, with $scope variables set and bound
+6. A working, bound login form (username/password don't matter, but are required)
+7. Configured [grunt-ngmin](https://github.com/btford/grunt-ngmin) so you don't have to fully qualify angular dependencies.
+8. Auto generated [sourcemaps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) with inlined sources via [grunt-concat-sourcemap](https://github.com/kozy4324/grunt-concat-sourcemap) (you'll need to [enable sourcemaps](http://cl.ly/image/1d0X2z2u1E3b) in Firefox/Chrome to see this)
+9. [Unit Tests](https://github.com/linemanjs/lineman-angular-template/tree/master/spec) and [End-to-End Tests](https://github.com/linemanjs/lineman-angular-template/tree/master/spec-e2e)
+10. Configuration to run [Protractor](https://github.com/juliemr/protractor) for End-to-End Tests
 
-Make sure to have:
+# Instructions
 
-1. ruby
-1. git
-1. middleman ($ `gem install middleman`)
-1. bower ($ `npm install -g bower`)
+1. `git clone https://github.com/linemanjs/lineman-angular-template.git my-lineman-app`
+2. `cd my-lineman-app`
+3. `sudo npm install -g lineman`
+4. `npm install`
+5. `lineman run`
+6. open your web browser to localhost:8000
 
+# Running Tests
 
-Clone into ~/.middleman (you'll have to create this directory if it's not already there). You can then use it with the `--template` flag on `middleman init`.
+This template was used as the basis of [@davemo](http://www.github.com/davemo)'s [Testing Strategies for Angular JS](http://www.youtube.com/watch?v=UYVcY9EJcRs) screencast, and contains all the tests we wrote in the screencast and a few more!
 
-1. $ `git clone https://github.com/timsvoice/middleman-sass-foundation.git ~/.middleman/sass-foundation`
+To run the unit tests:
 
-Then create a new project using zurb-foundation template.
+1. `lineman run` from 1 terminal window
+2. `lineman spec` from another terminal window, this will launch Testem and execute specs in Chrome
 
-1. $ `middleman init my_new_project --template=sass-foundation`
-1. $ `cd my_new_project`
-1. $ `bower install`
-1. $ `bundle exec middleman`
+To run the end-to-end tests:
 
-Now you can start hacking on `source` directory and watch live changes on [localhost:4567](http://localhost:4567).
+## End-to-End Tests
 
+1. `npm install protractor`
+2. `./node_modules/protractor/bin/webdriver-manager update`
+3. Make sure you have chrome installed.
+4. `lineman run` from 1 terminal window
+5. `lineman grunt spec-e2e` from another terminal window
 
-## ZURB Foundation License ##
+# Defining your apps angular.module in CoffeeScript
 
-Copyright (c) 2011 ZURB, http://www.zurb.com/
+If you are using Coffeescript to define the angular.module for your app, you will need to swap the concat order in `config/application.js` such that coffeescript files are included _before_ javascript. (If you are using JavaScript for defining the angular.module the default concat order is fine).
 
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
+Add the following `concat_sourcemap` block to `config/application.js` if you want to define your app module in coffeescript:
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
+```javascript
+module.exports = function(lineman) {
+  return {
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    concat_sourcemap: {
+      js: {
+        src: [
+          "<%= files.js.vendor %>",
+          "<%= files.coffee.generated %>",
+          "<%= files.js.app %>",
+          "<%= files.ngtemplates.dest %>"
+        ]
+      }
+    }
 
+  };
+};
+```
 
+Hopefully this helps you get up and running with AngularJS!
