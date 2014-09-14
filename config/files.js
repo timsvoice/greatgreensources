@@ -10,21 +10,29 @@ module.exports = function(lineman) {
   return {
     js: {
       vendor: [
+        "vendor/bower/jquery/dist/jquery.min.js",
         "vendor/js/angular.js",
+        "vendor/js/angular-resource.js",
+        "vendor/js/angular-route.js",
+        "vendor/js/underscore.js",
+        "vendor/bower/owl-carousel/owl-carousel/owl.carousel.js",
         "vendor/js/**/*.js"
       ],
       app: [
         "app/js/app.js",
         "app/js/**/*.js"
+      ],
+    },
+    
+    css: {
+      vendor: [
+       "vendor/bower/owl-carousel/owl-carousel/owl.carousel.css",
+       "vendor/css/**/*.css"
       ]
     },
 
-    less: {
-      compile: {
-        options: {
-          paths: ["vendor/css/normalize.css", "vendor/css/**/*.css", "app/css/**/*.less"]
-        }
-      }
+    sass: {
+      main:"app/css/app.{sass,scss}"
     }
   };
 };

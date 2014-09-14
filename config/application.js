@@ -16,12 +16,20 @@ module.exports = function(lineman) {
   return {
     // grunt-angular-templates assumes your module is named "app", but
     // you can override it like so:
-    //
-    // ngtemplates: {
-    //   options: {
-    //     module: "myModuleName"
-    //   }
-    // }
+    
+    ngtemplates: {
+      options: {
+        module: "greatgreen"
+      }
+    },
+    
+    enableSass: true,
+
+    sass: {
+      options: {
+        bundleExec: true
+      }
+    },
 
     server: {
       pushState: true
@@ -45,8 +53,6 @@ module.exports = function(lineman) {
     // have Ruby installed as well as the `sass` gem. To enable it, comment out the
     // following line:
     //
-    // enableSass: true
-
     // Asset Fingerprints
     //
     // Lineman can fingerprint your static assets by appending a hash to the filename

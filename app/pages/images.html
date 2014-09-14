@@ -1,0 +1,20 @@
+<div class="vendor-header">
+  <h2>
+    Images
+  </h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, eos.
+  </p>
+</div>
+
+<div class="vendor-gallery clearfix" ng-repeat="vendors in vendorList | filter:imageList">
+  <h3 class="vendor-title">{{vendors.name}}</h3>
+  <div id="{{vendors.id}}" class="owl-carousel owl-demo">    
+    <div class="item" ng-repeat="images in vendors.images">
+      <img class="lazyOwl" data-src="{{images}}" alt="Lazy Owl Image">
+    </div>   
+  </div>
+  <div class="small-12 medium-3 right columns alpha beta vendor-availability">
+    <a href="#">availability</a> 
+  </div> 
+</div>
