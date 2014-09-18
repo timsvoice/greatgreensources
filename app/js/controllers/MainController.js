@@ -1,12 +1,20 @@
-app.controller('mainController', ['$scope', '$location', 'vendorsAPI', '$http',
-  function($scope, $location, vendorsAPI, $http) {
-    var vendorsUrl = "data/vendors.json";
+app.controller('mainController', ['$scope', '$location', 'vendorsService','ngDialog', '$http', '$document',
+  function($scope, $location, vendorsAPI, ngDialog, $http, $document) {
+    var vendorsUrl = "/vendors/data";
 
     $scope.vendorList = [];
     $scope.categories = [];
     $scope.states = [];
 
     $scope.location = $location;
+
+      $scope.openDefault = function () {
+        ngDialog.open({
+          template: 'firstDialogId',
+          controller: 'InsideCtrl',
+          className: 'ngdialog-theme-default'
+        });
+      };
 
     $http.get(vendorsUrl, {
       cache: true
@@ -35,3 +43,18 @@ app.controller('mainController', ['$scope', '$location', 'vendorsAPI', '$http',
       });
     });
 }]);
+
+    app.controller('InsideCtrl', function ($scope, ngDialog) {
+      $scope.dialogModel = {
+        message : 'message from passed scope'
+      };
+      $scope.openSecond = function () {
+        ngDialog.open({
+          template: '<h3><a href="" ng-click="closeSecond()">Close all by click here!</a></h3>',
+          plain: true,
+          closeByEscape: false,
+          controller: 'SecondModalCtrl'
+        });
+      };
+    });
+

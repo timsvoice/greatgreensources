@@ -1,33 +1,9 @@
-/* Define custom server-side HTTP routes for lineman's development server
- *   These might be as simple as stubbing a little JSON to
- *   facilitate development of code that interacts with an HTTP service
- *   (presumably, mirroring one that will be reachable in a live environment).
- *
- * It's important to remember that any custom endpoints defined here
- *   will only be available in development, as lineman only builds
- *   static assets, it can't run server-side code.
- *
- * This file can be very useful for rapid prototyping or even organically
- *   defining a spec based on the needs of the client code that emerge.
- *
- */
-
-module.exports = {
-  drawRoutes: function(app) {
-    app.post('/login', function(req, res) {
-      res.json({ message: 'logging in!' });
-    });
-
-    app.post('/logout', function(req, res) {
-      res.json({ message: 'logging out!'});
-    });
-
-    app.get('/vendors/data', function (req, res) {
-      res.json([
+[
   {
-    "vendor": "A. Brown & Sons Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/a_brown_and_sons.png",
-    "availability": "yessir",
+    "vendor": "A. Brown & Sons Nursery, Inc.",
+    "image": "",
+    "availability": "",
+    "availability": null,
     "website": "www.sales@brownsnursery.com",
     "description": "With over 1000 acres in production, A.Brown has been producing high quality trees, shrubs, and perennials since 1950.",
     "categories": ["Trees & Shrubs"],
@@ -58,9 +34,10 @@ module.exports = {
   },
   {
     "vendor": "Balamore Farms",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/balamore_farms.png",
+    "image": "",
     "availability": "",
-    "website": "http://balamore.com/",
+    "availability": null,
+    "website": "",
     "description": "A third generation family run farm.",
     "categories": ["Perennials", "b/r"],
     "location": "Nova Scotia",
@@ -68,8 +45,9 @@ module.exports = {
   },
   {
     "vendor": "Black Lake Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/black_lake_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "",
     "description": "For 32 years BLN has built a reputation for producing exceptional arborvitae, boxwood, and 3GL perennials. John Bulthouse does most of his own propagation, and can offer liners that are extremely well established.",
     "categories": ["Trees & Shrubs"],
@@ -78,9 +56,10 @@ module.exports = {
   },
   {
     "vendor": "Blue Heron Farm",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/blue_heron_farm.png",
+    "image": "",
     "availability": "",
-    "website": "www.bhfnursery.com/",
+    "availability": null,
+    "website": "www.bhfarms.com",
     "description": "Blue Heron Farm is a wholesale grower located in the fertile Willamette Valley of western Oregon. We currently grow over 850 varieties ranging from container trees and shrubs, bare root trees and balled and burlapped trees and conifers.",
     "categories": ["Container", "Trees & Shrubs"],
     "location": "OR",
@@ -127,28 +106,31 @@ module.exports = {
   },
   {
     "vendor": "Casa Flora",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/casa_flora.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "",
-    "description": "Casa Flora is a world-leading producer of fern liners, both hardy and tropical varieties.",
-    "categories": ["Hardy Fern", "Perennial liners"],
+    "description": "Casa Flora, Inc. is a world-leading producer of fern liners, both hardy and tropical varieties.",
+    "categories": ["Hardy Fern", "Perennial Liners"],
     "location": "TX & FL",
     "images": []
   },
   {
     "vendor": "Creek Hill Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/creek_hill_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.creekhillnursery.com",
     "description": "Creek Hill Nursery is a growing liner production company nestled in the verdant valley of Lancaster County, PA. Creek Hill specialize in cell-pack starters of herbaceous perennials, ornamental grasses and deciduous woody plants.",
-    "categories": ["Perennial liners"],
+    "categories": ["Perennial Liners"],
     "location": "PA",
     "images": []
   },
   {
-    "vendor": "Donahue's Greenhouse",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/donahues_greenhouse.png",
+    "vendor": "Donahue's Greenhouse, Inc.",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.donahuesclematis.com",
     "description": "World class source of clematis, and hardy vines.",
     "categories": ["Clematis", "Vine liners"],
@@ -156,20 +138,22 @@ module.exports = {
     "images": []
   },
   {
-    "vendor": "DGI Propagators",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/dgi_propagators.png",
+    "vendor": "D G I Propagators (formerly DuWayne's)",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.duwaynes.com",
-    "description": " Formerly DuWaynes, DGI is arguably the best young plant grower in Michigan, DuWayne’s offers genetics from Syngenta, Ecke, Beekenkamp, GroLink, and Selecta. A one stop shop for annual liners, pre-finished geraniums, garden mum liners, and a rooting station for Beekenkamp’s full begonia line – and they are the best in the world!",
+    "description": "Arguably the best young plant grower in Michigan, DuWayne’s offers genetics from Syngenta, Ecke, Beekenkamp, GroLink, and Selecta. A one stop shop for annual liners, pre-finished geraniums, garden mum liners, and a rooting station for Beekenkamp’s full begonia line – and they are the best in the world!",
     "categories": ["Annual liners", "Prefinished"],
     "location": "MI",
     "images": []
   },
   {
-    "vendor": "Eckert's Greenhouse",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/eckerts_greenhouse.png",
+    "vendor": "Eckert's Greenhouse.",
+    "image": "",
     "availability": "",
-    "website": "http://www.eckertsgreenhouse.com/H20LaborSaver.htm",
+    "availability": null,
+    "website": "www.h20laborsaver.com",
     "description": "Karl  invented the 'H20 Labor Saver' as well as the 'Weekender' hanging basket and stands. The full product line is available right here.",
     "categories": ["H2O Containers"],
     "location": "MI",
@@ -177,8 +161,9 @@ module.exports = {
   },
   {
     "vendor": "Emerald Coast Growers",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/emerald_coast_growers.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.ecgrowers.com",
     "description": "Founded in 1991, Emerald Coast Growers rapidly became a frontrunner in propagating ornamental grasses, and a respected liner producer of perennials and specialty annuals.",
     "categories": ["Ornamental liners", "Perennial liners"],
@@ -187,8 +172,9 @@ module.exports = {
   },
   {
     "vendor": "Fairway Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/fairway_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.fairwaynursery.com",
     "description": "Fairway Nursery is a wholesale grower of ornamental nursery stock. Fairway specializes in providing newer, but tested and proven varieties of ornamental conifers, evergreens, and flowering plants.",
     "categories": ["Trees & Shrubs"],
@@ -204,8 +190,9 @@ module.exports = {
   },
   {
     "vendor": "Frank Henny & Sons Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/frank_henry_and_sons_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "",
     "description": "Frank Henry and Sons are wholesale growers for over 60 years. Their material is field-grown, landscape-size B&B plants. Primary products are deciduous azaleas, holly, laurels, Pieris, rhododendrons, and 10 varieties of boxwood up to 5 feet.",
     "categories": ["Shrubs"],
@@ -214,8 +201,9 @@ module.exports = {
   },
   {
     "vendor": "G&S Trees",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/g_and_s_trees.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "",
     "description": "Affordable trees grown in NC and TN - all B&B.",
     "categories": ["Trees & Shrubs"],
@@ -224,8 +212,9 @@ module.exports = {
   },
   {
     "vendor": "Garden Solutions",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/garden_solutions.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "",
     "description": "Chris Hansen is breeding entire new lines of Hellebore, and Sedum. His introductions are revolutionizing these genus. You can purchase his liners here!",
     "categories": ["Perennial liners"],
@@ -234,8 +223,9 @@ module.exports = {
   },
   {
     "vendor": "GET Group",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/get_group.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.getgroupinc.com",
     "description": "High quality producer of 32 cell trays perennial liners.",
     "categories": ["Perennial liners"],
@@ -244,8 +234,9 @@ module.exports = {
   },
   {
     "vendor": "Great Garden Plants",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/great_garden_plants.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.greatgardenplants.com",
     "description": "Great Garden Plants specializes in shipping large, premium plants in Jumbo 1-Quart & 2 Quart pots. Great Garden Plants feature sun & shade-loving perennials, Knock Out Roses, Trees & Shrubs, colorful Heucheras, Ornamental Grasses.",
     "categories": ["Perennials"],
@@ -254,8 +245,9 @@ module.exports = {
   },
   {
     "vendor": "HMA Plants",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/hma_plants.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "",
     "description": "HMA Plants has been serving professional growers with innovative, quality ur/c's from some of the world’s top breeders since 1995. ",
     "categories": ["Unrooted Cuttings"],
@@ -264,8 +256,9 @@ module.exports = {
   },
   {
     "vendor": "Hoffie Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/hoffie_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.hoffienursery.com",
     "description": "Hoffie Nursery is a wholesale grower of finished plant material, shipping throughout the midwest to Independent Garden Centers and Landscapers.",
     "categories": ["Perennials", "Finished"],
@@ -274,8 +267,9 @@ module.exports = {
   },
   {
     "vendor": "Hoffman Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/hoffman_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.hoffmannursery.com",
     "description": "For over 25 years, Hoffman Nursery has provided ornamental and native grasses to the wholesale horticultural trade. Hoffman specialize in grasses, sedges, and other grasslike plants.",
     "categories": ["Ornamental Grass liners"],
@@ -283,9 +277,10 @@ module.exports = {
     "images": []
   },
   {
-    "vendor": "John den Haan & Son",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/john_den_haan_and_son.png",
+    "vendor": "John den Haan & Son, Inc.",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.denhaannursery.com",
     "description": "In 1982 John den Haan began growing high quality bare root perennials near Coloma. John's son, Neal has taken over the busines, and is continuing the tradition of high quality, great service, and real value.",
     "categories": ["Perennials"],
@@ -294,8 +289,9 @@ module.exports = {
   },
   {
     "vendor": "K Drive Greenhouse",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/k_drive_greenhouse.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.kdrivegreenhouse.com",
     "description": "A specialty grower of annuals, perennials, and ground covers.  All grown as liners, and finished sizes.",
     "categories": ["Perennials"],
@@ -304,8 +300,9 @@ module.exports = {
   },
   {
     "vendor": "Komrska Tree Farm",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/komrska_tree_farm.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "",
     "description": "When the MDA quarantined bringing Hemlocks into Michigan, Ben Komrska started planting them. Now for over 10 years he has been producing the highest quality fir, spruce, pine, birch, shade trees, amelanchier, and hemlock in northwest Michigan.",
     "categories": ["Trees & Shrubs"],
@@ -314,8 +311,9 @@ module.exports = {
   },
   {
     "vendor": "Kraemer's Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/kraemers_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.kraemersnursery.com",
     "description": "Kraemer’s grow a wide diversity of woody and ornamental flowering shrubs, broadleaf evergreens, grasses, perennials, conifers, roses, vines, small fruits, Japanese maples and deciduous trees.",
     "categories": ["Trees & Shrubs"],
@@ -324,8 +322,9 @@ module.exports = {
   },
   {
     "vendor": "Loomis Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/loomis_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.loomisnursery.com",
     "description": "Linda Loomis grwos a wide selection of quality trees, shrubs and perennials from top growers, as well as one-of-a-kind specimens to make your garden truly exceptional.",
     "categories": ["Trees & Shrubs"],
@@ -396,19 +395,21 @@ module.exports = {
     ]
   },
   {
-    "vendor": "Moose & Squirrel",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/moose_and_squirrel.png",
+    "vendor": "Moose & Squirrel Hort. Resources",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.moosesquirrelhort.com",
     "description": "A great source of finished annuals, perennials, azaleas, and small shrubs. Located SW of Detroit near Carleton.",
-    "categories": ["Perennials", "Annuals"],
+    "categories": ["Perennials & Annuals"],
     "location": "MI",
     "images": []
   },
   {
     "vendor": "New Moon Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/new_moon_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.newmoonnursery.com",
     "description": "The premier source of native perennial liners, sedges, and grasses in North America.",
     "categories": ["Perennials", "Natives"],
@@ -417,8 +418,9 @@ module.exports = {
   },
   {
     "vendor": "Peninsula Perennial Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/peninsula_perennial_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "",
     "description": "Complete source of perennials, liners to finished.",
     "categories": ["Perennials"],
@@ -427,8 +429,9 @@ module.exports = {
   },
   {
     "vendor": "Northfield Farms",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/north_field_farms.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.northfieldfarms.com",
     "description": "NFF grows perennials like trees and shrubs. This means that all of their plants have undergone at least one growing season before they ship, and they are never “forced” in heated greenhouses. They are produced outdoors in the natural growing season. Northfield Farms is one of the top perennial nurseries in Michigan, with over 20 years of growing experience",
     "categories": ["Perennials", "Finished"],
@@ -437,8 +440,9 @@ module.exports = {
   },
   {
     "vendor": "Provitro Biosciences",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/provitro_biosciences.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.provitrobio.com",
     "description": "The premier bamboo nursery in North America. Provitro offers bamboo liners, and finished plants up to 7 GL. Liners are grown in an on site tissue culture lab. Clumping, running, and ground cover bamboo are available. Boo Shoot also offers TC perennial liners, including Hakonachola.",
     "categories": ["TC Liners", "Bamboo"],
@@ -467,8 +471,9 @@ module.exports = {
   },
   {
     "vendor": "R & H Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/r_and_h_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.r-hnursery.com",
     "description": "Complete source of B&B Ornamentals",
     "categories": ["Trees & Shrubs"],
@@ -477,8 +482,9 @@ module.exports = {
   },
   {
     "vendor": "Rakers",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/rakers_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.raker.com",
     "description": " A one stop shop for liners, and young plants.",
     "categories": ["Perennials", "Annuals"],
@@ -486,11 +492,12 @@ module.exports = {
     "images": []
   },
   {
-    "vendor": "Reardon Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/reardon_nursery.png",
+    "vendor": "Reardon Nursery, Inc.",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.reardonnursery.com",
-    "description": "Reardon Nursery is a wholesale grower of container and field-grown broadleaf ornamentals (boxwood, Blue Holly, and Emerald Green Arbs) founded in 1978. The company is now in its third generation of family ownership and operation and is dedicated to providing customers with the best value possible.",
+    "description": "Reardon Nursery, Inc. is a wholesale grower of container and field-grown broadleaf ornamentals (boxwood, Blue Holly, and Emerald Green Arbs) founded in 1978. The company is now in its third generation of family ownership and operation and is dedicated to providing customers with the best value possible.",
     "categories": ["Trees & Shrubs"],
     "location": "OR",
     "images": [
@@ -515,8 +522,9 @@ module.exports = {
   },
   {
     "vendor": "Richard Gragg Nursry",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/richard_gragg_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "",
     "description": "Specimen grade arborvitae and boxwood. Located in western NC.",
     "categories": ["Trees & Shrubs"],
@@ -555,32 +563,35 @@ module.exports = {
       ]
   },
   {
-    "vendor": "Robrick Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/robrick_nursery.png",
+    "vendor": "Robrick Nursery, Inc.",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.robrick.com",
     "description": "Robrick Nursery Inc. produces young plants from cuttings for other growers, producing liners in either 105 or 72 cell trays.",
-    "categories": ["Specimen Annual liners"],
+    "categories": "Specimen Annual liners",
     "location": "FL",
     "images": []
   },
   {
     "vendor": "Sawyer Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/sawyer_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.sawyernursery.com",
     "description": "A local source of perennial liners in Hudsonville, MI",
-    "categories": ["Perennial liners"],
+    "categories": "Perennial liners",
     "location": "MI",
     "images": []
   },
   {
     "vendor": "Skagit Gardens",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/skagit_gardens.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.skagitgardens.com",
     "description": "Skagit sell a comprehensive selection of top-quality annuals and perennials. Located in the agricultural Skagit Valley, midway between Seattle, Washington and Vancouver, British Columbia where a mild maritime climate provides the ideal growing conditions for hardy perennials. If it is new, or just a great plant, Skagit has the liners.",
-    "categories": ["Perennial liners"],
+    "categories": "Perennials liners",
     "location": "WA",
     "images": [
       "https://s3-us-west-2.amazonaws.com/greatgreensources/images/skagit_gardens/skagit_gardens_148.JPG",
@@ -607,31 +618,34 @@ module.exports = {
   },
   {
     "vendor": "Stonehouse Nursery, LLC",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/stonehouse_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.stonehousenursery.com",
     "description": "The Steinhauser’s have a passion for growing the best perennial liners in the business. All of their perennials, grasses, and shrubs are grown in deep 32, or 50 cell trays in Kravo houses, insuring heavy, well toned plants.",
-    "categories": ["Perennial liners"],
+    "categories": "Perennial liners",
     "location": "MI",
     "images": []
   },
   {
-    "vendor": "Swift Greenhouses",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/swift_greenhouses.png",
+    "vendor": "Swift Greenhouses, Inc.",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.swiftgreenhouses.com",
     "description": "The original producer of perennial liners, their dormant 50 cell plug trays are still the standard bearer for the industry.",
-    "categories": ["Perennial liners"],
+    "categories": "Perennial liners",
     "location": "IA",
     "images": []
   },
   {
     "vendor": "Twin Springs Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/twin_springs_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.twinspringsnursery.com",
     "description": "Located in the heart of the fertile Willamette Valley of Western Oregon, Twin Springs Nursery is a 275 acre family owned and operated wholesale nursery. Twin Springs Nursery currently grows a broad variety of woody ornamentals with emphasis on Arborvitae, and Boxwood. ornamentals, offering both field grown and container plant. material.",
-    "categories": ["Trees & Shrubs"],
+    "categories": "Trees & Shrubs",
     "location": "OR",
     "images": [
       "https://s3-us-west-2.amazonaws.com/greatgreensources/images/twin_springs_nursery/twin_springs_nursery_122.JPG",
@@ -663,42 +677,46 @@ module.exports = {
     ]
   },
   {
-    "vendor": "Vandenberg Bulb Company",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/vandenberg_bulb_company.png",
+    "vendor": "Vandenberg Bulb Company, Inc.",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.vandenbergbulb.com",
     "description": "A complete horticulture broker in Howell, MI",
-    "categories": ["Broker"],
+    "categories": "Broker",
     "location": "MI",
     "images": []
   },
   {
-    "vendor": "Walters Gardens",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/walters_gardens.png",
+    "vendor": "Walters Gardens, Inc.",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.waltersgardens.com",
     "description": "The largest producer of perennials in North America.",
-    "categories": ["Perennials"],
+    "categories": "Perennials",
     "location": "MI",
     "images": []
   },
   {
-    "vendor": "Weesies Brothers Plant Farm",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/weesies_brothers_plant_farm.png",
+    "vendor": "Weesies Brothers Plant Farm, Inc.",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.weesies.com",
     "description": "A third generation horticulturist, Mark Weesies takes great pride in growing great ground covers. We like to take orders by late Fall, to insure you get the plants you need. Mark grows them, we sell them at GGS!",
-    "categories": ["Ground Covers", "Perennials"],
+    "categories": "Ground Covers, perennials",
     "location": "MI",
     "images": []
   },
   {
     "vendor": "Wiggin's Nursery",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/wiggins_nursery.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "www.wigginsnursery.com",
     "description": "Wiggin's Nursery is a family owned business and specializes in propagating and growing many plants including cultivated conifer varieties, garden ornamental flowering trees and shrubs, broadleaf evergreens and a mix of specialty perennials.",
-    "categories": ["Trees & Shrubs"],
+    "categories": "Trees & Shrubs",
     "location": "WA",
     "images": [
       "https://s3-us-west-2.amazonaws.com/greatgreensources/images/wiggins_nursery/wiggins_nursery_014.JPG",
@@ -754,11 +772,12 @@ module.exports = {
   },
   {
     "vendor": "Upton Valley Nursers",
-    "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/upton_valley_nursers.png",
+    "image": "",
     "availability": "",
+    "availability": null,
     "website": "",
     "description": "Quality field production in western NC. Shade trees, dogwood, arborvitae, Pears, and hybrid rhododendron.",
-    "categories": ["Trees & Shrubs"],
+    "categories": "Trees & Shrubs",
     "location": "NC",
     "images": [
       "https://s3-us-west-2.amazonaws.com/greatgreensources/images/upton_valley_nursery/upton_valley_nursery_063.JPG",
@@ -822,7 +841,4 @@ module.exports = {
       "https://s3-us-west-2.amazonaws.com/greatgreensources/images/upton_valley_nursery/upton_valley_nursery_121.JPG"
     ]
   }
-]);
-  });
-  }
-};
+]

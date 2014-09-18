@@ -11,11 +11,13 @@ module.exports = function(lineman) {
     js: {
       vendor: [
         "vendor/bower/jquery/dist/jquery.min.js",
+        "vendor/bower/jquery.lazyload/jquery.lazyload.min.js",
         "vendor/js/angular.js",
         "vendor/js/angular-resource.js",
         "vendor/js/angular-route.js",
         "vendor/js/underscore.js",
         "vendor/bower/owl-carousel/owl-carousel/owl.carousel.js",
+        "vendor/bower/ngDialog/js/ngDialog.min.js",
         "vendor/js/**/*.js"
       ],
       app: [
@@ -27,6 +29,8 @@ module.exports = function(lineman) {
     css: {
       vendor: [
        "vendor/bower/owl-carousel/owl-carousel/owl.carousel.css",
+       "vendor/bower/owl-carousel/owl-carousel/owl.theme.css",
+       "vendor/bower/ngDialog/css/ngDialog.min.css",
        "vendor/css/**/*.css"
       ]
     },
