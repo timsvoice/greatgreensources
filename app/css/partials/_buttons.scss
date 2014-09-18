@@ -5,6 +5,19 @@
   }
 }
 
+.button.featured {
+  background-color: inherit;
+  border: $white 0.125rem solid;
+  color: $gray;
+  font-size: 1rem;
+  font-weight: $heavy-text;
+  margin-right: 1rem;
+  &:hover {
+    background-color: $gray-background;
+    color: $black;
+  }
+}
+
 .button.vendor {
   padding-top: 0.75rem;
   margin-bottom: 0;

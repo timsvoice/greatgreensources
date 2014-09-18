@@ -15,7 +15,7 @@
     
   <div class="container">
   <!-- topbar menu -->
-    <nav class="top-bar fixed" data-topbar>
+    <nav class="top-bar fixed" ng-controller="mainController" data-topbar>
       <ul class="title-area">
         <li class="branding">
           <a href="/">
@@ -31,8 +31,8 @@
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-        <li class=""><a href="" ng-click="open()" class="info">info</a></li>
-        <li><a href="#">contact kris</a></li>
+        <li class=""><a ng-click="scrollTo('vendors')" class="info">vendors</a></li>
+        <li><a href="#">email kris</a></li>
       </ul>
   
       <!-- Left Nav Section -->
@@ -67,15 +67,21 @@
     </div>
   </div> -->
   <!-- view container -->
-  
-  <div class="featured-vendor">
-    <img src="/img/featured-vendor.jpg" alt="">
-    <div class="featured-vendor-details">
-      <h3 class="featured-vendor-title">Featured Vendor Name</h3>
-      <p class="featured-vendor-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam laborum possimus cum vitae, dolore iste quae temporibus similique saepe suscipit.</p>
-      <a href="" class="small-button featured-vendor-website">website</a>
-      <a href="" class="small-button featured-vendor-availability">availability</a>
+    
+  <div id="featured-vendor" class="clearfix">
+  <div class="featured-vendor">       
+    <div class="featured-vendor-details small-10 columns">
+      <h3 class="featured-vendor-title">Featured Vendor</h3>
+      <h2 class="featured-vendor-name">Pacific Perennials</h2>
+      <div class="row">
+        <p class="featured-vendor-intro small-6 columns alpha beta">Pacific Perennials ships a large variety of lavender plants throughout the country, as well as perennials, grasses and shrubs.</p>
+      </div>
+      <div class="row">
+        <a href="http://www.pennurseries.com/" class="small button featured featured-vendor-website">website</a>
+        <a href="href="mailto:kris@greatgreensources.com?subject=Order For Penninsual Perennials" class="small button featured featured-vendor-availability">order</a>
+      </div>
     </div>
+  </div>
   </div>
 
   <div class="small-12 small-centered columns vendors">    

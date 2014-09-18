@@ -419,7 +419,7 @@ module.exports = {
     "vendor": "Peninsula Perennial Nursery",
     "image": "https://s3-us-west-2.amazonaws.com/greatgreensources/images/vendor_images/peninsula_perennial_nursery.png",
     "availability": "",
-    "website": "",
+    "website": "www.pennurseries.com/",
     "description": "Complete source of perennials, liners to finished.",
     "categories": ["Perennials"],
     "location": "MI",

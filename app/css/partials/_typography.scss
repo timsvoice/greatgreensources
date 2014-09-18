@@ -4,6 +4,10 @@
   font-family: $body-font;
 }
 
+.bold {
+  font-weight: $heavy-text;
+}
+
 // Side bar
 
 .branding-header {
@@ -133,4 +137,25 @@
   margin-left: 0.25rem;
   margin-top: 0.5rem;
   font-size: 0.75rem;
+}
+
+.featured-vendor {
+    &-details {
+      margin-top: 1rem;
+    }
+    &-title {
+    margin-top: 0;
+    font-size: 4rem;
+    color: $white;
+    font-weight: $heavy-text;
+    text-decoration: underline;
+    // text-shadow: 2px 2px 3px $dark-gray;
+  }
+  &-name {
+    font-weight: $heavy-text;
+    color: $gray;
+  }
+  &-intro {
+    color: $gray;
+  }
 }

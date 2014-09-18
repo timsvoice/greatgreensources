@@ -1,5 +1,5 @@
-app.controller('mainController', ['$scope', '$location', 'vendorsService','ngDialog', '$http', '$document',
-  function($scope, $location, vendorsAPI, ngDialog, $http, $document) {
+app.controller('mainController', ['$scope', '$location', 'vendorsService','ngDialog', '$http', '$document', '$anchorScroll',
+  function($scope, $location, vendorsAPI, ngDialog, $http, $document, $anchorScroll) {
     var vendorsUrl = "/vendors/data";
 
     $scope.vendorList = [];
@@ -15,6 +15,11 @@ app.controller('mainController', ['$scope', '$location', 'vendorsService','ngDia
           className: 'ngdialog-theme-default'
         });
       };
+    
+    $scope.scrollTo = function(id) {
+      $location.hash(id);
+      $anchorScroll();
+   };
 
     $http.get(vendorsUrl, {
       cache: true

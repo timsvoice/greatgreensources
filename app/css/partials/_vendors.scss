@@ -1,3 +1,21 @@
+//featured vendor
+
+.featured-vendor {
+  background: url(/img/featured_vendor.png) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-height: 530px;
+}
+
+#featured-vendor {
+
+}
+
 // Vendor Filter
  .vendor-filter {
   margin-bottom: 1.5rem;
@@ -146,9 +164,12 @@
 
 //featured vendor
 
+#featured-vendor {
+  border-bottom: $brand-color 0.125rem solid;
+}
+
 .featured-vendor {
-  position: relative;
-  height: 30rem;
+  padding: 0 1rem;
   img {
     position: absolute;
     height: 30rem;

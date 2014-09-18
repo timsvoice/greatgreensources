@@ -1,8 +1,10 @@
-    
-  <div class="vendor-header clearfix">
-  <h2>
-    What can we help you find?
-  </h2>
+<div id="vendors" class="vendor-header clearfix">
+<!--   <h2>
+    Vendors
+  </h2> -->
+  <p>
+    <span class="bold">Our vendor list</span> is comprised of the best nurseries and greenhouses in North America. We represent sources for trees, conifers, shrubs, perennials, ornamental grasses, native plants, tropicals, annuals, small fruits, fruit trees, bamboo and ground covers. We are strictly for the wholesale trade, and service the Great Lakes Region
+  </p>
 <div class="small-12 columns alpha beta">
     <div class="vendor-filter small-6 columns alpha beta">
     <input type="text" class="search-text" ng-model="searchText" placeholder="Search">
@@ -16,9 +18,6 @@
       </div>
   </div>
 </div>
-  <p>
-    Our vendor list is comprised of the best nurseries and greenhouses in North America. We represent sources for trees, conifers, shrubs, perennials, ornamental grasses, native plants, tropicals, annuals, small fruits, fruit trees, bamboo and ground covers. We are strictly for the wholesale trade, and service the Great Lakes Region
-  </p>
 </div>  
 
   <div>
@@ -32,7 +31,8 @@
         <img class="lazy" ng-src="/img/blank.gif" data-original="{{ vendors.image }}">
         <ul class="vendor-availability small-block-grid-2">
           <li class="vendor button" ng-class="{'inactive' : vendors.website.length === 0}">
-            <a target="_blank" href="http://{{vendors.website}}">website</a>
+            <a ng-hide="vendors.website.length === 0" target="_blank" href="http://{{vendors.website}}">website</a>
+            <a ng-show="vendors.website.length === 0">website</a>
           </li>
 <!--           <li  class="vendor button" ng-class="{'inactive' : vendors.availability.length === 0}">
             <a target="_blank" href="{{vendors.availability}}">availability</a>
